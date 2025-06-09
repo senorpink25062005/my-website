@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel - Tiến's Web Server</title>
+    <style>
+        body {
+            background: #1e1e2f;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        .container {
+            background: #2e2e3f;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        h2 {
+            text-align: center;
+            color: #f39c12;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .btn {
+            background: #f39c12;
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .status {
+            margin-top: 20px;
+            text-align: center;
+            color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Log In</h2>
+        <label>Username</label>
+        <input type="text" placeholder="enter username">
+        
+        <label>Password</label>
+        <input type="password" placeholder="enter password">
+        
+        <button class="btn" onclick="loginFake()">Login</button>
+
+        <div class="status">
+            Web server status: <strong>RUNNING</strong>
+        </div>
+    </div>
+    
+    <script>
+function loginFake() {
+    const username = document.querySelector('input[type="text"]').value;
+    const password = document.querySelector('input[type="password"]').value;
+
+    if (username === "admin" && password === "1234") {
+        alert("Welcome, Admin!");
+    } else {
+        alert("Sai tài khoản hoặc mật khẩu nha!");
+    }
+}
+</script>
+</body>
+</html>
